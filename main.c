@@ -34,7 +34,7 @@
 // See https://github.com/Azure/azure-sphere-samples/tree/master/Hardware for more details.
 //
 // This #include imports the sample_hardware abstraction from that hardware definition.
-#include <hw/sample_hardware.h>
+#include "hw_def/mt3620_rdb.h"
 
 // Support functions.
 static void TerminationHandler(int signalNumber);
@@ -254,7 +254,7 @@ static int InitPeripheralsAndHandlers(void)
         return -1;
     }
 
-    i2cFd = I2CMaster_Open(SAMPLE_LSM6DS3_I2C);
+    i2cFd = I2CMaster_Open(MT3620_RDB_HEADER4_ISU2_I2C);
     if (i2cFd < 0) {
         Log_Debug("ERROR: I2CMaster_Open: errno=%d (%s)\n", errno, strerror(errno));
         return -1;

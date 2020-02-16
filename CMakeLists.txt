@@ -2,7 +2,7 @@
 #  Licensed under the MIT License.
 
 CMAKE_MINIMUM_REQUIRED(VERSION 3.8)
-PROJECT(I2C_LSM6DS3_HighLevelApp C)
+PROJECT(AMG88xxHighLevelApp C)
 
 # Create executable
 ADD_EXECUTABLE(${PROJECT_NAME} main.c epoll_timerfd_utilities.c)
